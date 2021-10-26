@@ -1,0 +1,51 @@
+import pickle
+import pandas as pd
+from flask import Flask, request, Response
+from rossmann.Rossmann import Rossmann_c05
+
+# load model
+       
+model = pickle.load( open( '/home/rodrigo/Projetos/Comunidade_DS/data_science_producao/models/model_xgb_rossmann_c05.pkl', 'rb') )
+
+# initialize API
+app = Flask( __name__ )
+
+# create endpoint (URL)
+# Post method = send data in order to receive data.
+@app.route( '/rossmann/predict', methods=['POST'] )
+# function to get the received data
+def rossmann_predict():
+    
+    test_json = request.get_json()
+    
+    #check received data (json)
+    if test_json: # there is data
+        if isinstance( test_json, dict): # unique example
+            test_raw = pd.DataFrame( test_json, index=[0] )
+        
+        else: # multiple example
+            test_raw = pd.DataFrame( test_json, columns=test_json[0].keys() ) # keys = chaves do json. Serão as colunas do df.
+        
+        # Instantiate Rossmann class
+        pipeline = Rossmann_c05()
+        
+        # data cleaning
+        df1 = pipeline.data_cleaning( test_raw )
+        
+        # feature engineering
+        df2 = pipeline.feature_engineering( df1 )
+        
+        # data preparation
+        df3 = pipeline.data_preparation( df2 )
+        
+        # prediction
+        df_response = pipeline.get_prediction( model, test_raw, df3 )
+        
+        return df_response
+        
+    else: # there is no data
+        return Response( '{}', status=200, mimetype='application/json' )
+
+# check main function in the script
+if __name__ == '__main__':
+    app.run( '127.0.0.1' ) # local host
