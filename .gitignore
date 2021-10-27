@@ -20,6 +20,7 @@
 
 credentials.json
 other/
+references/
 
 ### JupyterNotebooks ###
 # gitignore template for Jupyter Notebooks
