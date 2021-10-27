@@ -9,7 +9,12 @@ model = pickle.load( open( '/home/rodrigo/Projetos/Comunidade_DS/data_science_pr
 # initialize API
 app = Flask( __name__ )
 
-@app.route( '/rossmann/predict', methods=['POST'] )
+@app.get("/hello", tags=["healthcheck"], summary="System Integrity", description="Check if the server is available")
+async def healthcheck():
+    return Response( "'OK ! OK ! I'm awake !", status=200, mimetype='text/plain' )
+
+
+@app.route( '/rossmann/predict', methods=['POST'], tags=["predict"], summary="Sales Predicts", description="Returns the sales forecasts of the stores informed." )
 def rossmann_predict():
     test_json = request.get_json()
    
