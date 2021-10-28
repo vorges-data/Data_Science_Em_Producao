@@ -51,6 +51,20 @@ My strategy to solve this challenge was based in CRISP-DM Cycle:
 
 
 
+ijojo
+
+
+
+
+|   a |    b|   c | d   |  e  |
+|-----|-----|-----|-----|-----|
+|     |     |     |     |     |
+|     |     |     |     |     |
+|     |     |     |     |     |
+|     |     |     |     |     |
+
+
+
 
 - test
 
