@@ -1,7 +1,7 @@
 import os
 import pickle
 import pandas as pd
-from flask import Flask, request, Response
+from flask import Flask, request, Response, send_from_directory
 from rossmann.rossmann import Rossmann_c06
 
 # loading model
@@ -12,8 +12,12 @@ app = Flask( __name__ )
 
 @app.get("/hello" )
 def healthcheck():
-    return Response( '{}', status=200, mimetype='application/json' )
+    return Response( '{ status: ok }', status=200, mimetype='application/json' )
 
+@app.route('/favicon.ico')
+def favicon():
+    return send_from_directory(os.path.join(app.root_path, 'static'),
+                               'favicon.ico', mimetype='image/vnd.microsoft.icon')
 
 @app.route( '/rossmann/predict', methods=['POST'] )
 def rossmann_predict():
