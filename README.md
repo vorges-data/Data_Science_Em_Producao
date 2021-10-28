@@ -52,7 +52,7 @@ My strategy to solve this challenge was based in CRISP-DM Cycle:
 
 
 
-
+- test
 
 
 |       Model Name          |        MAE CV       |     MAPE CV    |      RMSE CV       |
@@ -65,7 +65,7 @@ My strategy to solve this challenge was based in CRISP-DM Cycle:
 
 
 
-
+- test
 
 
 
