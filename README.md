@@ -27,6 +27,8 @@ However, it was necessary to assume some things. See bellow.
 
 My strategy to solve this challenge was based in CRISP-DM Cycle:
 
+**00. Understand the Problem:** _The most important step for correct plan entire solution_.
+
 **01. Data Description:** My goal is to use statistics metrics to identify data outside the scope of business.
 
 **02. Data Filtering:** Filter rows and select columns that do not contain information for modeling or that do not match the scope of the business.
@@ -45,16 +47,17 @@ My strategy to solve this challenge was based in CRISP-DM Cycle:
 
 **09. Convert Model Performance to Business Values:** Convert the performance of the Machine Learning model into a business result.
 
-**10. Deploy Model to Production:** Publish the model to a cloud environment so that other people or services can use the results to improve the business decision. In this particular case, the model is accessible from a Telegram Bot.
+**10. Deploy Model to Production:** Publish the model to a cloud environment so that other people or services can use the results to improve the business decision. _In this particular case, the model is accessible from a Telegram Bot_.
 
 
 
 
-	Model Name 	                MAE CV 	            MAPE CV 	    RMSE CV
-0 	Linear Regression 	        2082.46 +/- 295.78 	30.26 +/- 1.66 	2950.11 +/- 468.88
-0 	Lasso Regression            2116.65 +/- 341.58 	29.2  +/- 1.18 	3056.56 +/- 504.44
-0 	Random Forest Regressor 	837.7   +/- 219.23 	11.61 +/- 2.32 	1256.59 +/- 320.26
-0 	XGBoost Regressor        	2889.54 +/- 343.25 	34.54 +/- 1.39 	3714.69 +/- 456.1
+|       Model Name          |        MAE CV       |     MAPE CV    |      RMSE CV       |
+|:-------------------------:|:-------------------:|:--------------:|:------------------:|
+| Linear Regression         |  2082.46 +/- 295.78 | 30.26 +/- 1.66 | 2950.11 +/- 468.88 |
+| Lasso Regression          |  2116.65 +/- 341.58 | 29.2  +/- 1.18 | 3056.56 +/- 504.44 |
+| Random Forest Regressor   |  837.7   +/- 219.23 | 11.61 +/- 2.32 | 1256.59 +/- 320.26 |
+| XGBoost Regressor         |  2889.54 +/- 343.25 | 34.54 +/- 1.39 | 3714.69 +/- 456.1  |
 
 
 	Model Name 	        MAE 	    MAPE% 	    RMSE
