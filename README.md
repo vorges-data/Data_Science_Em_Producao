@@ -1,13 +1,22 @@
 # Rossmann Sales Predict
+#### This project has academic purposes.
 
 
 ![](graph-gc6fdabf68_1280.jpg)
 
 # 1. Business Problem.
 
-# 2. Business Assunptions
+Rossmann it's a big European drugstore. Some store managers call me for help in predicting sales for the next six weeks.
+The root cause is a demand from the CFO, discussed at the weekly meeting: he needs to plan store renovations, and for that, the budget needs to be in line with each store's sales.
+Therefore, the principal stakeholder is the CFO, but from which all store managers will benefit.
 
-The assumptions about the business problem is as follows:
+
+# 2. Business Assunptions.
+
+All data got taken from the company's internal sales base, with a horizon of 18 months. Any data before this would be seriously affected by external events (biased).
+Several details were found, such as type of store, variety of products offered in the store. Other info such as customers per day, sales per day and competition proximity was available too.
+
+However, it was necessary to assume some things. See bellow.
 
 - **This**:
 - **That**:
