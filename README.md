@@ -69,7 +69,7 @@ My strategy to solve this challenge was based in CRISP-DM Cycle:
 
 
 
-     Model Name               MAE           MAPE%          RMSE
+|    Model Name        |     MAE      |    MAPE%    |     RMSE       |
 |:--------------------:|:------------:|:-----------:|:--------------:|
 |  XGBoost Regressor   |   764.9756   |   11.4861   |   1,100.7251   |
 
