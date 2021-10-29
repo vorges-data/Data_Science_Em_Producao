@@ -7,22 +7,22 @@
 
 # 1. Business Problem.
 
-Rossmann it's a big European drugstore. Some store managers call me for help in predicting sales for the next six weeks.
-The root cause is a demand from the CFO, discussed at the weekly meeting: he needs to plan store renovations, and for that, the budget needs to be in line with each store's sales.
+Rossmann's is a big European drugstore. Some store managers call me to help them to predict sales for the next six weeks.
+The root cause is a demand from the CFO, discussed at their weekly meeting: he needed to plan store renovations, and for that, the budget needs to be aligned with each store's sales.
 Therefore, the principal stakeholder is the CFO, but from which all store managers will benefit.
 
 
 # 2. Business Assumptions.
 
-All data got taken from the company's internal sales base, with a horizon of 18 months. Any data before this would be seriously affected by external events (biased).
-Several details were found, such as type of store, variety of products offered and competition proximity. Other variable info such as customers per day and sales per day, holidays, marketing promotions was available too.
+All data was taken from the company's internal sales base of the last 18 months. Any data coming from before this period would be seriously affected by external events (biased).
+Several details were provided, such as type of store, variety of products offered and the competition proximity. Other variable info such as customers per day and sales per day, holidays, marketing promotions were available too.
 
-However, it was necessary to assume some things. See bellow.
+However, it was necessary to assume some things. As you can see down below.
 
-- **Conmpetition proximity**: Was expressed in meters but, sometimes it was zero. So, 'Zero Competition Distance' it's same as 'No Competition Proximity'. But, for ML Algorithms this input is a bias. In this case, I assumed a fixed value (100,000 m) higher than the highest value in the dataset.
-- **Assortment**: I assumed there is a hierarchy between types. So, stores with Assortment Type C must first offer Types A and B. 
-- **Store Open**: I removed all the lines that indicate Store Closed, as we also had Zero sales on the same day. For ML purposes, this will be reviewed in the next CRISP cycle. 
-- **Sales Prediction**: In agreement with the CFO, I assumed they would provide the total sales at the end of the sixth week.
+- **Conmpetition proximity**: Was expressed in meters but, sometimes it was zero. So, 'Zero Competition Distance' was the same as 'No Competition Proximity'. But, for ML Algorithms this input is a bias. In this case, I assumed a fixed value (100,000 m) higher than the highest value in the dataset.
+- **Assortment**: I assumed there is a hierarchy between types. So, stores with Assortment Type C must offer Types A and B too.
+- **Store Open**: I removed all the lines that indicate Store Closed, as we also had Zero sales on the same day. For ML purposes, this will be reviewed in the next CRISP cycle.
+- **Sales Prediction**: In agreement with the CFO, I presumed they would provide the total sales at the end of the sixth week.
 
 
 
@@ -48,13 +48,13 @@ My strategy to solve this challenge was based in CRISP-DM Cycle:
 
 **09. Convert Model Performance to Business Values:** Convert the performance of the Machine Learning model into a business result.
 
-**10. Deploy Model to Production:** Publish the model to a cloud environment so that other people or services can use the results to improve the business decision. __In this particular case, the model can be accessible from a Telegram Bot__.
+**10. Deploy Model to Production:** Publish the model to a cloud environment so other people or services can use the results to improve the business decision. __In this particular case, the model can be accessible from a Telegram Bot__.
 
 # 3. ML and Metrics
 
-May be a ML step it's a most interesting setp. There is were the 'magic' occurs. Well, I test four (4) Machine Learning Algoritms: Linear Regression, Lasso Regression, Random Forest Regressor and a XGBoost Regressor. The metrics applied to measure the performance of the algorithms were MAE, MAPE and RMSE.
+ML step may be the most interesting setp. There is were the 'magic' happens. Well, I tested four (4) Machine Learning Algoritms: Linear Regression, Lasso Regression, Random Forest Regressor and a XGBoost Regressor. The metrics applied to measure the performance of the algorithms were MAE, MAPE and RMSE.
 
-So, the results from these metrics can be seen below:
+So, the results from these metrics can be seen in the table below:
 
 
 |       Model Name          |        MAE CV       |     MAPE CV    |      RMSE CV       |
@@ -70,15 +70,15 @@ My final choice of model was XGBoost.
 
 What !?!? Why did I choose XGBoost over Random Forest ? See the RMSE above !
 
-Well, I did it because the company's policy is not to go over budget ($0.00).
+Well, I did it because the company's policy is to do not go over the budget ($0.00).
 
-All ML projects have to be in line with budget, can the final model be sustained for the business infrastructure?
+If all ML projects have to be lined with budget, can the final model be sustained by the business infrastructure?
 
-Do the results (direct or indirect) affect or are they affected by any internal company policy?
+Do the results (direct or indirect) affect, or are affected, by any internal company policy?
 
-In this case, the model will be hosted on a free cloud (Heroku). There, we have a space limitation, so if I choose random forest, the final model is 1GB in size. With XGBoost, the model is much smaller.
+In this case, the model will be hosted on a free cloud (Heroku), where we have a space limitation. If I choose random forest, the final model would be 1GB. Meanwhile, with XGBoost, the model became much smaller.
 
-But, the metric problem can be solved in "Hyperparameter fine tuning". 
+The metric problems can be solved in "Hyperparameter fine tuning". 
 Look the metrics after a better choice of parameters to train the model:
 
 
@@ -87,15 +87,15 @@ Look the metrics after a better choice of parameters to train the model:
 |  XGBoost Regressor   |   764.9756   |   11.4861   |   1,100.7251   |
 # 
 (RMSE better than Random Forest !)
-_This is result a lot of work ... and a (very) little bit of experience._
+_This is the result of a lot of work ... and a (very) little bit of experience._
 
 
 # 4. Business Results.
 
-All appears good, beautiful ... but, without converting these metrics in Business Words ... all the work can be ruined !
-Business People don't understand RMSE, maybe they understand MAE and MAPE, but... 'cold' numbers would certainly understand. Graphics also help. 
+It all appears to be good, beautiful ... but without converting these metrics in Business Words ... all the work can be ruined !
+Business People don't understand RMSE. Maybe they understand MAE and MAPE, but 'cold' numbers they, certainly, understand. Graphics also help. 
 
-For example, bellow we have a table with the TOTAL of predictions. Consideratins the best and worst cenarios.
+For example, the tabel below show the TOTAL of predictions. Considering the best and worst cenarios.
 
 |   Scenario     |      Values      |
 |:--------------:|:----------------:|
@@ -104,7 +104,7 @@ For example, bellow we have a table with the TOTAL of predictions. Consideratins
 | best_scenario  | $ 287,291,675.73 |
 
 # 
-Below we have a Scatter Plot with all the predictions. Note that most are centered around a line parallel to the X axis (MAPE 11% in Y axis). However, there are points quite far apart. This is because there are stores for which the forecasts are not so accurate, while others are very assertive.
+Below we have a Scatter Plot with all the predictions. Notice that most are centered around a line parallel to the X axis (MAPE 11% in Y axis). However, there are points quite far apart. This is because there are stores for which the forecasts are not so accurate, while others are very assertive.
 
 ![](scatter_plot.png)
 # 
@@ -122,7 +122,7 @@ Ok, but what does this deviation really represent? Check the table below for the
 # 
 # 5. Lessons Learned.
 
-- Metrics are important, but not everything;
+- Metrics are important, but they are not everything;
 - Make more graphics, make better graphics;
 - Keep your code clean;
 - Plan... and re-plan your work;
