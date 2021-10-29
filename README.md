@@ -23,7 +23,7 @@ However, it was necessary to assume some things. As you can see down below.
 - **Conmpetition proximity**: Was expressed in meters but, sometimes it was zero. So, 'Zero Competition Distance' was the same as 'No Competition Proximity'. But, for ML Algorithms this input is a bias. In this case, I assumed a fixed value (100,000 m) higher than the highest value in the dataset.
 - **Assortment**: I assumed there is a hierarchy between types. So, stores with Assortment Type C must offer Types A and B too.
 - **Store Open**: I removed all the lines that indicate Store Closed, as we also had Zero sales on the same day. For ML purposes, this will be reviewed in future CRISP cycle.
-- **Sales Prediction**: In agreement with the CFO, I presumed they would provide the total sales for eatch tore at the end of the sixth week.
+- **Sales Prediction**: In agreement with the CFO, I presumed they would provide the total sales for eatch store at the end of the sixth week.
 
 
 
