@@ -14,7 +14,7 @@ Therefore, the principal stakeholder is the CFO, but from which all store manage
 
 # 2. Business Assumptions.
 
-All data was taken from the company's internal sales base of the last 18 months. Any data coming from before this period would be seriously affected by external events (biased).
+All data was taken from the company's internal sales base of the last 30 months. Any data coming from before this period would be seriously affected by external events (biased).
 Several details were provided, such as type of store, variety of products offered and the competition proximity. Other variable info such as customers per day and sales per day, holidays, marketing promotions were available too.
 
 However, it was necessary to assume some things. As you can see down below.
