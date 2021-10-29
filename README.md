@@ -70,11 +70,13 @@ My final choice of model was XGBoost.
 
 What !?!? Why did I choose XGBoost over Random Forest ? See the RMSE above !
 
-Well, I did this because my budget forced me ! I have a total of $ 0.00 to apply !
+Well, I did it because the company's policy is not to go over budget ($0.00).
 
 All ML projects have to be in line with budget, can the final model be sustained for the business infrastructure?
 
-The model will be hosted on a free cloud (Heroku). There, we have a space limitation, so if I choose random forest, the final model is 1GB in size. With XGBoost, the model is much smaller.
+Do the results (direct or indirect) affect or are they affected by any internal company policy?
+
+In this case, the model will be hosted on a free cloud (Heroku). There, we have a space limitation, so if I choose random forest, the final model is 1GB in size. With XGBoost, the model is much smaller.
 
 But, the metric problem can be solved in "Hyperparameter fine tuning". 
 Look the metrics after a better choice of parameters to train the model:
