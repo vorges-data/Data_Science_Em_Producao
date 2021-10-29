@@ -5,6 +5,7 @@
 
 ![](graph-gc6fdabf68_1280.jpg)
 
+
 # 1. Business Problem.
 
 Rossmann's is a big European drugstore. Some store managers call me to help them to predict sales for the next six weeks.
