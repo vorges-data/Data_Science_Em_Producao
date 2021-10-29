@@ -99,7 +99,7 @@ For example, bellow we have a table with the TOTAL of predictions. Consideratins
 | best_scenario  | $ 287,291,675.73 |
 
 # 
-Below we have a Scatter Plot with all the predictions. Note that most are centered around a line parallel to the X axis. However, there are points quite far apart. This is because there are stores for which the forecasts are not so accurate, while others are very assertive.
+Below we have a Scatter Plot with all the predictions. Note that most are centered around a line parallel to the X axis (MAPE 11% in Y axis). However, there are points quite far apart. This is because there are stores for which the forecasts are not so accurate, while others are very assertive.
 
 ![](scatter_plot.png)
 # 
@@ -108,13 +108,26 @@ Ok, but what does this deviation really represent? Check the table below for the
 
 |store|predictions|worst_scenario|best_scenario|MAE|MAPE|
 |-----|-----------|--------------|-------------|---|----|
-|292|108,359.7891|104,977.6086|111,741.9695|,382.1804|60.2768|
+|292|108,359.7891|104,977.6086|111,741.9695|3,382.1804|60.2768|
 |909|220,300.0781|212,395.1411|228,205.0152|7,904.9371|51.8675|
 |876|194,060.8125|189,924.5347|198,197.0903|4,136.2778|33.7730|
 |170|201,541.6875|200,194.4216|202,888.9534|1,347.2659|33.2923|
 |749|206,800.9531|205,789.1920|207,812.7142|1,011.7611|28.3049|
 
+# 
+# 5. Lessons Learned.
 
+- Metrics are important, but not everything;
+- Make more graphics, make better graphics;
+- Keep your code clean;
+- Plan... and re-plan your work;
+- Git is your friend.
+
+# 6. In the next cycle ?
+
+- Better plots;
+- More tests in ML algoritms;
+- Build a pipeline to retrain model.
 
 
 
