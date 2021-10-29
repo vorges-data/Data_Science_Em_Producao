@@ -74,7 +74,7 @@ Well, I did this because my budget forced me ! I have a total of $ 0.00 to apply
 
 All ML projects have to be in line with budget, can the final model be sustained for the business infrastructure?
 
-See, the model will be hosted on a free cloud (Heroku). There, we have a space limitation. The model will be hosted on a free cloud (Heroku). There, we have a space limitation, so if I choose random forest, the final model is 1GB in size. With XGBoost, the model is much smaller.
+The model will be hosted on a free cloud (Heroku). There, we have a space limitation, so if I choose random forest, the final model is 1GB in size. With XGBoost, the model is much smaller.
 
 But, the metric problem can be solved in "Hyperparameter fine tuning". 
 Look the metrics after a better choice of parameters to train the model:
