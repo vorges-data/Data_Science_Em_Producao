@@ -95,7 +95,7 @@ _This is the result of a lot of work ... and a (very) little bit of experience._
 It all appears to be good, beautiful ... but without converting these metrics in Business Words ... all the work can be ruined !
 Business People don't understand RMSE. Maybe they understand MAE and MAPE, but 'cold' numbers they, certainly, understand. Graphics also help. 
 
-For example, the tabel below show the TOTAL of predictions. Considering the best and worst cenarios.
+For example, the table below show the TOTAL of predictions. Considering the best and worst cenarios.
 
 |   Scenario     |      Values      |
 |:--------------:|:----------------:|
