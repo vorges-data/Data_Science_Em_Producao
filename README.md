@@ -109,7 +109,20 @@ Below we have a Scatter Plot with all the predictions. Notice that most are cent
 
 ![](scatter_plot.png)
 # 
-Ok, but what does this deviation really represent? Check the table below for the 5 worst cases.
+Ok, but what does this deviation really represent? 
+
+Check the table below for the 5 best cases.
+
+|store|predictions|worst_scenario|best_scenario|MAE|MAPE|
+|-----|-----------|--------------|-------------|---|----|
+|1089|373,394.1875|372,825.1184|373,963.2566|569.0691|5.3232|
+|667 |315,185.8438|314,693.4028|315,678.2847|492.4410|5.5487|
+|323 |282,916.4688|282,488.0610|283,344.8765|428.4077|5.6277|
+|742 |301,657.5312|301,199.1451|302,115.9174|458.3861|5.6393|
+|1097|450,342.1562|449,703.2118|450,981.1007|638.9445|5.7761|
+
+# 
+And the table below with 5 worst cases.
 
 
 |store|predictions|worst_scenario|best_scenario|MAE|MAPE|
