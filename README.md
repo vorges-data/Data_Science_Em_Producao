@@ -21,8 +21,8 @@ However, it was necessary to assume some things. As you can see down below.
 
 - **Conmpetition proximity**: Was expressed in meters but, sometimes it was zero. So, 'Zero Competition Distance' was the same as 'No Competition Proximity'. But, for ML Algorithms this input is a bias. In this case, I assumed a fixed value (100,000 m) higher than the highest value in the dataset.
 - **Assortment**: I assumed there is a hierarchy between types. So, stores with Assortment Type C must offer Types A and B too.
-- **Store Open**: I removed all the lines that indicate Store Closed, as we also had Zero sales on the same day. For ML purposes, this will be reviewed in the next CRISP cycle.
-- **Sales Prediction**: In agreement with the CFO, I presumed they would provide the total sales at the end of the sixth week.
+- **Store Open**: I removed all the lines that indicate Store Closed, as we also had Zero sales on the same day. For ML purposes, this will be reviewed in future CRISP cycle.
+- **Sales Prediction**: In agreement with the CFO, I presumed they would provide the total sales for eatch tore at the end of the sixth week.
 
 
 
@@ -72,13 +72,13 @@ What !?!? Why did I choose XGBoost over Random Forest ? See the RMSE above !
 
 Well, I did it because the company's policy is to do not go over the budget ($0.00).
 
-If all ML projects have to be lined with budget, can the final model be sustained by the business infrastructure?
+All ML projects have to be lined with budget. Can the final model be sustained by the business infrastructure?
 
 Do the results (direct or indirect) affect, or are affected, by any internal company policy?
 
 In this case, the model will be hosted on a free cloud (Heroku), where we have a space limitation. If I choose random forest, the final model would be 1GB. Meanwhile, with XGBoost, the model became much smaller.
 
-The metric problems can be solved in "Hyperparameter fine tuning". 
+The metric problems can be solved in "Hyperparameter fine tuning" step. 
 Look the metrics after a better choice of parameters to train the model:
 
 
