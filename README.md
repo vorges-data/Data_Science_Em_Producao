@@ -120,7 +120,13 @@ Ok, but what does this deviation really represent? Check the table below for the
 |749|206,800.9531|205,789.1920|207,812.7142|1,011.7611|28.3049|
 
 # 
-# 5. Lessons Learned.
+# 5. Sneak peak from Telegram Bot.
+# 
+![](telegram-bot.png)
+
+
+
+# 6. Lessons Learned.
 
 - Metrics are important, but they are not everything;
 - Make more graphics, make better graphics;
@@ -128,7 +134,7 @@ Ok, but what does this deviation really represent? Check the table below for the
 - Plan... and re-plan your work;
 - Git is your friend.
 
-# 6. In the next cycle ?
+# 7. In the next cycle ?
 
 - Better plots;
 - More tests in ML algoritms;
