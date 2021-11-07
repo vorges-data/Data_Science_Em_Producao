@@ -205,7 +205,7 @@ Ex.: **/prediction/3**
 }
 ```
 
-A API está disponível no servidor do heroku, aos que quiserem testá-la clique [link](https://api-rossmann.herokuapp.com)
+A API está disponível no servidor do heroku, aos que quiserem testá-la clique <a href="https://api-rossmann.herokuapp.com" target="_blank">aqui</a>
 
 ## Conclusão
 
