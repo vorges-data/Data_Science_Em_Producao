@@ -1,0 +1,1 @@
+from .result import get_data_result
